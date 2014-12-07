@@ -19,5 +19,11 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mgeisler/file-sync-cmp/issues"
+  },
+  "devDependencies": {
+    "eslint": "0.10.1"
+  },
+  "scripts": {
+    "test": "eslint ."
   }
 }
