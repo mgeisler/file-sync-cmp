@@ -21,7 +21,10 @@
     "url": "https://github.com/mgeisler/file-sync-cmp/issues"
   },
   "devDependencies": {
-    "eslint": "0.10.1"
+    "eslint": "0.10.1",
+    "mocha": "2.0.1",
+    "q": "1.1.2",
+    "tmp": "0.0.24"
   },
   "scripts": {
     "test": "eslint ."
