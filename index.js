@@ -29,6 +29,8 @@ function equalFiles(pathA, pathB) {
             }
         }
     }
+    fs.closeSync(fdA);
+    fs.closeSync(fdB);
     return true;
 }
 
