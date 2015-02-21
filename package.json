@@ -27,6 +27,6 @@
     "tmp": "0.0.24"
   },
   "scripts": {
-    "test": "eslint ."
+    "test": "eslint . && mocha"
   }
 }
