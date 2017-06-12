@@ -24,7 +24,7 @@
     "eslint": "0.10.1",
     "mocha": "2.0.1",
     "q": "1.1.2",
-    "tmp": "0.0.24"
+    "tmp": "0.0.31"
   },
   "scripts": {
     "test": "eslint . && mocha"
