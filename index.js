@@ -17,20 +17,25 @@ function equalFiles(pathA, pathB) {
     var bufB = Buffer.alloc(BUF_SIZE);
     var readA = 1;
     var readB = 1;
+    function fsClose() {
+        fs.closeSync(fdA);
+        fs.closeSync(fdB);
+    }
     while (readA > 0) {
         readA = fs.readSync(fdA, bufA, 0, bufA.length, null);
         readB = fs.readSync(fdB, bufB, 0, bufB.length, null);
         if (readA !== readB) {
+            fsClose();
             return false;
         }
         for (var i = 0; i < readA; i++) {
             if (bufA[i] !== bufB[i]) {
+                fsClose();
                 return false;
             }
         }
     }
-    fs.closeSync(fdA);
-    fs.closeSync(fdB);
+    fsClose();
     return true;
 }
 
