@@ -1,7 +1,7 @@
 file-sync-cmp
 =============
 
-[![Build Status](https://travis-ci.org/mgeisler/file-sync-cmp.svg?branch=master)](https://travis-ci.org/mgeisler/file-sync-cmp)
+[![Build](https://github.com/mgeisler/file-sync-cmp/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/mgeisler/file-sync-cmp/actions/workflows/build.yml)
 
 Synchronous file comparison for Node.js.
 
