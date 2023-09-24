@@ -13,8 +13,8 @@ function equalFiles(pathA, pathB) {
     }
     var fdA = fs.openSync(pathA, 'r');
     var fdB = fs.openSync(pathB, 'r');
-    var bufA = new Buffer(BUF_SIZE);
-    var bufB = new Buffer(BUF_SIZE);
+    var bufA = Buffer.alloc(BUF_SIZE);
+    var bufB = Buffer.alloc(BUF_SIZE);
     var readA = 1;
     var readB = 1;
     while (readA > 0) {
