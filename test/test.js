@@ -36,7 +36,7 @@ describe('equalFiles', function () {
     });
 
     it('should handle equal content', function () {
-        var buf = new Buffer('File content\n');
+        var buf = Buffer.from('File content\n');
         var writes = [write(fdA, buf), write(fdB, buf)];
         return Q.all(writes).then(function () {
             assert(fileSyncCmp.equalFiles(pathA, pathB));
@@ -44,8 +44,8 @@ describe('equalFiles', function () {
     });
 
     it('should handle non-equal content', function () {
-        var bufA = new Buffer('Some text\n');
-        var bufB = new Buffer('Other text\n');
+        var bufA = Buffer.from('Some text\n');
+        var bufB = Buffer.from('Other text\n');
         var writes = [write(fdA, bufA), write(fdB, bufB)];
         return Q.all(writes).then(function () {
             assert(!fileSyncCmp.equalFiles(pathA, pathB));
